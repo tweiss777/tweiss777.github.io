@@ -1,0 +1,26 @@
+.section-grid{
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-evenly;
+}
+
+.fontawesome-icon
+	{
+		height: 100%;
+		width: 300px;
+	}
+
+
+@media (max-width:800px)
+{
+	.section-grid{
+		flex-direction: column;
+		align-items: center;
+		
+	}
+
+	.div-fontawesome
+	{
+		display: none;
+	}
+}

@@ -1,0 +1,58 @@
+
+/* skills id */
+#skills
+{
+    padding: 1.5rem 4.5rem;
+
+    
+}
+
+ul
+{
+    font-size: 1.3rem;
+}
+
+
+/* styling for the skills bullet point */
+.skills-point
+{
+    margin-left: 5%;
+}
+
+
+/* grid representing list of skills both proficient and familiar */
+.skills-grid
+{
+    display: grid;
+    grid-template-areas: "proficient familiar";
+    grid-template-columns: auto auto;
+
+}
+
+
+/* list of proficient skills */
+.skills-proficient
+{
+    grid-area: proficient;
+}
+
+/* list of familiar skills */
+.skills-familiar
+{
+    grid-area: familiar;
+}
+
+
+@media (max-width: 800px)
+{
+    .skills-grid
+    {
+        grid-template-areas: "proficient"
+                            "familiar";
+        grid-template-rows: "auto auto";
+
+    }
+}
+
+
+

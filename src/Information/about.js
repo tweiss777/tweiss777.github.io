@@ -1,0 +1,3 @@
+export const about = {
+	about: 'Born and raised in NYC since 1993, been living in long island from 2015 - 2019, and now living the tel aviv dream in Israel. I\'m an experienced web developer with a proven record in developing both front and backend systems utilizing various technologies, such as .NET core C#, Python, and NodeJS. I am very passionate, dedicated, highly motivated, and a team player with strong problem solving and analytical skills. In my free time I like to workout and get into calesthenics, read, and learn about new technologies to enhance my skillset.' 
+}

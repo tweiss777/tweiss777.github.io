@@ -1,0 +1,22 @@
+#contact
+{
+    background-color:white;
+    color: black;
+}
+
+
+.container-contact
+{
+    font-size: 24pt;
+    margin-top: 10px;
+    margin: 20px 10% auto 10%;
+    padding: auto 10% 5% 10%;
+    text-align: center;
+}
+
+.container-contact a{
+    text-decoration: none;
+    color: inherit
+}
+
+

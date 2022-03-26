@@ -1,0 +1,43 @@
+/* styling for the about container */
+
+#about{
+	padding: 1.5rem 4.5rem;
+}
+
+
+.about_container{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: center;
+}
+
+.about_container p{
+	
+	font-size: 1.5rem;
+	font-weight: 400;
+	padding: 70px;
+}
+
+.fontawesome-container{
+	display: initial;
+}
+
+@media(max-width: 800px){
+	.fontawesome-container{
+		display: none;
+	}
+
+	.about_container{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		
+	}
+
+	.about_container p{
+		padding: 0;
+		/* font-size: 1rem; */
+	}
+
+}

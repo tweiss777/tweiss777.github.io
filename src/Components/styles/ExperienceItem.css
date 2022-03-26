@@ -1,0 +1,21 @@
+#experienceItem
+{
+    margin: auto 2%;
+}
+
+.date
+{
+    float: right;
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+
+
+
+@media (max-width: 800px)
+{
+    #date
+    {
+        float: none;
+    }
+}

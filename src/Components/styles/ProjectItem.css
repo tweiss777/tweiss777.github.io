@@ -1,0 +1,39 @@
+#projectItem
+{
+    margin: auto 2%;
+}
+
+.date
+{
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+
+.project-link{
+    text-decoration: none;
+    padding: 10px;
+    color:#000000;
+    background-color:#ffffff;
+    border-radius: 15px;
+    transition: ease-in 0.3s;
+
+}
+
+.item-right-section{
+    float: right;
+
+}
+
+.project-link:hover{
+    color: #ffffff;
+    background-color:#a7a7a7;
+
+}
+
+@media (max-width: 800spx)
+{
+    #date
+    {
+        float: none;
+    }
+}
