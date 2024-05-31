@@ -11,6 +11,9 @@
 @mixin justify-center {
     justify-content: center;
 }
+@mixin justify-start {
+    justify-content: flex-start;
+}
 
 .row {
     display: flex;
@@ -24,4 +27,8 @@
 
 .justify-center {
     justify-content: center;
+}
+
+.justify-start {
+    justify-content: flex-start;
 }
