@@ -1,0 +1,53 @@
+@import "./grid.scss";
+
+$background-color: #006ddf;
+
+nav {
+    background-color: $background-color;
+    button{
+        background: none;
+        border: solid #ffffff 1px;
+        border-radius: 5px;
+        color: #ffffff;
+        padding: 0.5rem;
+        margin: 0.5rem;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: 0.2s ease-in-out;
+        &:hover {
+            background-color: #ffffff;
+            color: #000000;
+        }
+    }
+    .selected{
+        a{
+            color: #000000; 
+        }
+    }
+    ul {
+        list-style: none;
+        @include row; 
+        gap: 1rem;
+        font-size: 1.5rem;
+        margin: 0;
+        padding: 1.5rem;
+        a {
+            text-decoration: none;
+            color: #ffffff;
+            transition: 0.2s ease-in-out;
+            &:hover {
+                color: #000000;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 450px){
+    nav{
+        //min-height: 47px;
+        ul{
+            @include column;
+
+        }
+    }
+}
