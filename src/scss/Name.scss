@@ -1,0 +1,22 @@
+@mixin no-bottom-margin {
+    margin-bottom: 0.5rem;
+}
+
+.name-container {
+    text-align: center;
+
+    h1 {
+        font-size: 3rem;
+        @include no-bottom-margin;
+    }
+
+    h2 {
+        font-size: 2rem;
+        @include no-bottom-margin;
+    }
+
+    p {
+        font-size: 1.5rem;
+        @include no-bottom-margin;
+    }
+}
