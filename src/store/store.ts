@@ -1,9 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit'
+import dimensionReducer from '../slices/dimension.slice'
 
 
 export const store = configureStore({
     reducer: {
-        // add reducers right here
+        dimensions: dimensionReducer
     },
 })
 
