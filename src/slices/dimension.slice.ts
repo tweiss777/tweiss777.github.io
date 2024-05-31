@@ -3,19 +3,12 @@ import { createSlice } from "@reduxjs/toolkit";
 type Dimension = {
     width: number;
     height: number;
-    setWidth(): void;
-    setHeight(): void;
 };
 
 const initialState: Dimension = {
     width: 0,
     height: 0,
-    setWidth() {
-        this.width = window.innerWidth;
-    },
-    setHeight() {
-        this.height = window.innerHeight;
-    },
+
 };
 
 export const dimensionSlice = createSlice({
@@ -23,10 +16,10 @@ export const dimensionSlice = createSlice({
     initialState,
     reducers: {
         setWidth: (state) => {
-            state.setWidth();
+            state.width = window.innerWidth
         },
         setHeight: (state) => {
-            state.setHeight();
+            state.height = window.innerHeight
         },
     },
 });
