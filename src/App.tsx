@@ -26,7 +26,7 @@ function App() {
     <>
       <Navbar>
         {routes.map((route) => (
-          <NavBarItem key={route.path} path={route.path} name={route.name} /> 
+          <NavBarItem selected={route.path === location.pathname} key={route.path} path={route.path} name={route.name} /> 
         ))}
       </Navbar>
       <TransitionWrapper
