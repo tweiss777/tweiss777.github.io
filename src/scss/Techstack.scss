@@ -1,0 +1,56 @@
+@import "./grid.scss";
+
+.tech-stack-container {
+    text-align: center;
+    overflow: hidden;
+
+    p {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .carousel-container {
+        animation: carousel 60s infinite linear;
+        display: inline-block;
+        @include row;
+        @include justify-center;
+        &:hover {
+            animation-play-state: paused;
+        }
+        .tech-stack {
+            @include row;
+            @include justify-center;
+        }
+    }
+
+    &:before {
+        transform: translateY(68px);
+        position: absolute;
+        left: 0;
+        width: 145px;
+        height: 174px;
+        background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+        content: " ";
+        z-index: 1;
+    }
+
+    &:after {
+        transform: translateY(-173px);
+        position: absolute;
+        right: 0;
+        width: 145px;
+        height: 174px;
+        background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+        content: " ";
+    }
+}
+
+@keyframes carousel {
+    100% {
+        transform: translateX(-100%);
+    }
+
+    0% {
+        transform: translateX(0);
+    }
+}
