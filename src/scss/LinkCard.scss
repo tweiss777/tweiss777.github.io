@@ -2,15 +2,16 @@
 
 .link-card {
   border: solid 0.5px black;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   text-align: center;
   padding: 0.5rem;
-  min-height: 100px;
+  min-height: 75px;
+  max-height: 75px;
   min-width: 300px;
   max-width: 300px;
   transition: 0.2s ease-in-out;
-    
+
   a {
     text-decoration: none;
     color: black;
@@ -20,11 +21,12 @@
       @include justify-center;
       align-items: center;
       gap: 1rem;
+      transform: translateY(5px);
     }
 
     img {
-      width: 100px;
-      height: 100px;
+      width: 65px;
+      height: 65px;
     }
 
     h1 {

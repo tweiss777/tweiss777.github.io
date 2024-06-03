@@ -8,7 +8,7 @@ export default function Links({ children }: IProps) {
     <div className="links">
       <p>
         I'm always looking for new opportunities. Feel free to reach out anytime
-        andr check my github!
+        and check my github!
       </p>
       <div className="links-wrapper">{children}</div>
     </div>
