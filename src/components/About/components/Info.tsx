@@ -6,7 +6,7 @@ interface IProps {
     about: string;
 }
 
-export default function Name({ name, title, about }: IProps) {
+export default function Info({ name, title, about }: IProps) {
     return (
         <div className="name-container column justify-center">
             <h1>{'<'}{name}{'/>'}</h1>

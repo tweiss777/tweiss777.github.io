@@ -1,4 +1,4 @@
-import Name from "./components/Name";
+import Info from "./components/Info";
 import TechStack from "./components/TechStack";
 import TechStackCard from "./components/TechStackCard";
 import Links from "./components/Links";
@@ -6,7 +6,7 @@ import LinkCard from "./components/LinkCard";
 export default function About() {
     return (
         <>
-            <Name
+            <Info
                 name="Tal Weiss"
                 title="Full Stack Developer"
                 about="A seasoned full stack developer with 3+ leveraging cutting-edge technologies to develop innovative, smooth, and highly scalable web applications"
