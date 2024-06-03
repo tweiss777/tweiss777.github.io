@@ -1,3 +1,4 @@
+import "../../../scss/Links.scss";
 interface IProps {
   children: JSX.Element | JSX.Element[];
 }
@@ -9,7 +10,7 @@ export default function Links({ children }: IProps) {
         I'm always looking for new opportunities. Feel free to reach out anytime
         andr check my github!
       </p>
-        <div>{children}</div>
+      <div className="links-wrapper">{children}</div>
     </div>
   );
 }
