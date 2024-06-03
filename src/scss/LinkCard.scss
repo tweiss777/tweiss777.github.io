@@ -1,0 +1,45 @@
+@import "grid.scss";
+
+.link-card {
+  border: solid 0.5px black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  text-align: center;
+  padding: 0.5rem;
+  min-height: 100px;
+  min-width: 300px;
+  max-width: 300px;
+  transition: 0.2s ease-in-out;
+    
+  a {
+    text-decoration: none;
+    color: black;
+
+    div {
+      @include row;
+      @include justify-center;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    img {
+      width: 100px;
+      height: 100px;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .link-card {
+    min-width: 100px;
+  }
+}
