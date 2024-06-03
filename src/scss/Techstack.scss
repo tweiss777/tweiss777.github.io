@@ -14,9 +14,11 @@
         display: inline-block;
         @include row;
         @include justify-center;
+
         &:hover {
             animation-play-state: paused;
         }
+
         .tech-stack {
             @include row;
             @include justify-center;
@@ -24,22 +26,22 @@
     }
 
     &:before {
-        transform: translateY(68px);
         position: absolute;
+        bottom: 110px;
         left: 0;
         width: 145px;
-        height: 174px;
+        height: 200px;
         background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
         content: " ";
         z-index: 1;
     }
 
     &:after {
-        transform: translateY(-173px);
         position: absolute;
+        bottom: 110px;
         right: 0;
         width: 145px;
-        height: 174px;
+        height: 200px;
         background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
         content: " ";
     }
@@ -52,5 +54,42 @@
 
     0% {
         transform: translateX(0);
+    }
+}
+
+@media screen and (max-width: 650px) and (min-width: 601px) {
+    .tech-stack-container {
+
+        &:before,
+        &:after {
+            bottom: 100px;
+        }
+    }
+}
+@media screen and (max-width: 600px) and (min-width: 551px) {
+    .tech-stack-container {
+
+        &:before,
+        &:after {
+            bottom: 80px;
+        }
+    }
+}
+@media screen and (max-width: 550px) and (min-width: 451px) {
+    .tech-stack-container {
+
+        &:before,
+        &:after {
+            bottom: 60px;
+        }
+    }
+}
+@media screen and (max-width: 450px) {
+    .tech-stack-container {
+
+        &:before,
+        &:after {
+            background: none;
+        }
     }
 }
