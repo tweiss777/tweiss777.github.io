@@ -18,7 +18,7 @@ export default function TransitionWrapper({ outlet, routeName, nodeRef }: IProps
                     unmountOnExit
                 >
                     {(_state) => (
-                        <div className="my-transition" ref={nodeRef}>
+                        <div className="wrapper-container my-transition" ref={nodeRef}>
                             {outlet}
                         </div>
                     )}
