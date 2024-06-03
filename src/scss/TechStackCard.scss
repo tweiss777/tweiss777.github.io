@@ -1,23 +1,26 @@
 @import "./grid.scss";
-.card-container{
 
-    @include row;
-    @include justify-center;
-    gap: 1rem;
-    align-items: center;
-    background-color: #ffffff;
-    border-radius: 10px;
-    border: solid #000000 2px;
-    margin: 1.5rem;
-    padding : 0.5rem;
-    min-width: 300px;
-    min-height: 100px;
-    h1{
-        font-weight: 300;
+.card-container {
+  @include row;
+  @include justify-center;
+  gap: 1rem;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 10px;
+  border: solid #000000 0.5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 
-    }
-    img{
-        width: 115px;
-        height: 100px;
-    }
+  margin: 1.5rem;
+  padding: 0.5rem;
+  min-width: 300px;
+  min-height: 100px;
+
+  h1 {
+    font-weight: 300;
+  }
+
+  img {
+    width: 115px;
+    height: 100px;
+  }
 }
