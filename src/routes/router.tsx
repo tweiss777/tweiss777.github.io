@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import { createRef } from "react";
 import Projects from "../components/Projects";
-import Experience from "../components/Experience";
+import Experience from "../components/Experience/Experience";
 import Blog from "../components/Blog";
 import About from "../components/About/About";
 import App from "../App";

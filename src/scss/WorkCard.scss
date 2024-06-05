@@ -1,0 +1,45 @@
+@import "./grid.scss";
+
+.work-card {
+    padding: 1rem;
+    @include row;
+    justify-content: space-between;
+    border: solid #000000 0.5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    .work-card-content {
+        align-items: center;
+        @include row;
+        gap: 1.5rem;
+
+        img {
+            height: 150px;
+            width: 150px;
+        }
+    }
+
+    .work-card-date {
+        @include row;
+        align-items: center;
+        h2{
+            text-wrap: nowrap;
+        }
+    }
+    transition: 0.2s ease-in-out;
+    &:hover{
+       background: #e7e7e7;
+       cursor: pointer;
+        transform: scale(1.02);
+
+    }
+}
+@media screen and (max-width: 450px) {
+   .work-card{
+        @include column;
+        padding: 0.5rem;
+        
+        .work-card-date{
+            align-self: center;
+        }
+    }
+}
