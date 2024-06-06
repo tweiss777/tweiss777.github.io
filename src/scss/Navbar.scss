@@ -4,6 +4,7 @@ $background-color: #006ddf;
 
 nav {
     background-color: $background-color;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     button{
         background: none;
         border: solid #ffffff 1px;
