@@ -25,7 +25,6 @@ export default function Navbar({ children }: IProps) {
         <>
           <nav>
             <button onClick={handleMenuCollapse}>☰</button>
-            {/*add transition effects*/}
             <CSSTransition
               in={collapsed}
               timeout={300}

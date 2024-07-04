@@ -1,0 +1,110 @@
+@import "./grid.scss";
+
+.work-card-container {
+    position: relative;
+
+    .work-card-dot {
+        width: 21px;
+        height: 21px;
+        background-color: #006ddf;
+        box-shadow:
+            0 0 25px #006ddf,
+            0 0 25px #006ddf;
+        position: absolute;
+        left: calc(50% - 8.9px);
+        border-radius: 50%;
+        top: 25px;
+    }
+
+    .work-card-date {
+        margin-right: 25%;
+
+        h2 {
+            text-wrap: nowrap;
+        }
+    }
+
+    .date-right {
+        margin-right: 52.5%;
+        text-align: right;
+    }
+
+    .date-left {
+        margin-left: 52.5%;
+        text-align: left;
+    }
+
+    .work-card {
+        border: solid #000000 0.5px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        border-radius: 15px;
+
+        transition: 0.2s ease-in-out;
+
+        .work-card-content {
+            @include row;
+            justify-content: space-between;
+            gap: 1.5rem;
+
+            align-items: center;
+
+            img {
+                height: 150px;
+                width: 150px;
+            }
+        }
+
+        &:hover {
+            transform: scale(1.01);
+            cursor: pointer;
+            background-color: #f2f2f2;
+        }
+    }
+
+    .position-right {
+        margin-right: calc(50% + 30px);
+    }
+
+    .position-left {
+        margin-left: calc(50% + 30px);
+    }
+}
+
+@media screen and (max-width: 930px) {
+    .work-card-container {
+        .position-left {
+            margin-left: 0;
+        }
+
+        .date-right {
+            text-align: left;
+            margin-right: 0;
+        }
+
+        .date-left {
+            text-align: left;
+            margin-left: 0;
+        }
+
+        .work-card-dot {
+            left: -30px;
+            top: 30px;
+        }
+
+        .work-card {
+            margin-right: 0;
+            padding-right: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .work-card {
+        @include column;
+        padding: 0.5rem;
+
+        .work-card-date {
+            align-self: center;
+        }
+    }
+}
