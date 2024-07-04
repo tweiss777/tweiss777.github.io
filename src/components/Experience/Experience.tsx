@@ -1,11 +1,10 @@
 import WorkCard from "./Components/WorkCard";
 import WorkCardGroup from "./Components/WorkCardGroup";
+import ExperienceHeader from "./Components/ExperienceHeader";
 export default function Experience() {
     return (
         <>
-            <div>
-                <h1>Experience</h1>
-            </div>
+            <ExperienceHeader /> 
             <div>
                 <WorkCardGroup>
                     <WorkCard

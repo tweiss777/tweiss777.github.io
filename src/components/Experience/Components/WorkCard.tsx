@@ -1,5 +1,4 @@
 import "../../../scss/WorkCard.scss";
-import "../../../scss/misc.scss";
 interface IProps {
     name: string;
     position: string;
