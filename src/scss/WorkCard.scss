@@ -1,7 +1,8 @@
-@import "./grid.scss";
-
 .work-card-container {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     .work-card-dot {
         width: 21px;
@@ -11,21 +12,25 @@
             0 0 25px #006ddf,
             0 0 25px #006ddf;
         position: absolute;
-        left: calc(50% - 8.9px);
+        left: calc(50% - 10.5px);
+        /* Centered by default */
         border-radius: 50%;
         top: 25px;
+        transition: left 0.2s ease-in-out;
+        /* Smooth transition */
     }
 
     .work-card-date {
         margin-right: 25%;
 
         h2 {
-            text-wrap: nowrap;
+            white-space: nowrap;
+            /* Ensures text doesn't wrap */
         }
     }
 
     .date-right {
-        margin-right: 52.5%;
+        margin-right: 27%;
         text-align: right;
     }
 
@@ -38,14 +43,12 @@
         border: solid #000000 0.5px;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
         border-radius: 15px;
-
         transition: 0.2s ease-in-out;
 
         .work-card-content {
-            @include row;
+            display: flex;
             justify-content: space-between;
             gap: 1.5rem;
-
             align-items: center;
 
             img {
@@ -72,6 +75,14 @@
 
 @media screen and (max-width: 930px) {
     .work-card-container {
+        .work-card {
+            width: 100%;
+        }
+
+        .work-card-date {
+            align-self: flex-start;
+        }
+
         .position-left {
             margin-left: 0;
         }
@@ -88,6 +99,7 @@
 
         .work-card-dot {
             left: -30px;
+            /* Move dot to the left */
             top: 30px;
         }
 
@@ -100,7 +112,7 @@
 
 @media screen and (max-width: 450px) {
     .work-card {
-        @include column;
+        flex-direction: column;
         padding: 0.5rem;
 
         .work-card-date {
