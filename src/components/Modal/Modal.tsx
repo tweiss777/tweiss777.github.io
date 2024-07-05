@@ -13,7 +13,6 @@ export default function Modal({ onClose, header, children }: IProps) {
         <button onClick={onClose} className="close-btn">
           <span>✖</span>
         </button>
-        {/* Modal content */}
         <div className="modal-content">
           {header && (
             <>
