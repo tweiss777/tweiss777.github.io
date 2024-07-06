@@ -1,0 +1,67 @@
+@import "./grid.scss";
+
+.blog-card-container {
+    width: 100%;
+    max-width: 300px;
+    min-height: 500px;
+    max-height: 500px;
+    border: solid 1px #000000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    position: relative;
+
+
+    a {
+        color: #ffffff;
+        text-decoration: none;
+        transition: 0.2s ease-in;
+    }
+
+    .hover-message {
+        @include column;
+        @include justify-center;
+        align-items: center;
+        position: absolute;
+        border-radius: 15px;
+        width: 100%;
+        height: 100%;
+
+        &:hover {
+
+            background-color: rgba(0, 0, 0, 0.5);
+            transition: background-color .3s;
+        }
+
+    }
+
+    .blog-card {
+        padding: 0.5rem;
+        @include column;
+
+        .blog-card-title {
+            a {
+                text-decoration: none;
+            }
+        }
+
+        .blog-card-body {
+            .blog-card-img {
+                img {
+                    max-height: 200px;
+                    width: 100%;
+                }
+            }
+
+            .blog-card-text {
+                p {
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 7;
+                    -webkit-box-orient: vertical;
+                    white-space: normal;
+                }
+            }
+        }
+    }
+}
