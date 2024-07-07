@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import { createRef } from "react";
-import Projects from "../components/Projects";
+import Projects from "../components/Projects/Projects";
 import Experience from "../components/Experience/Experience";
 import Blog from "../components/Blog/Blog";
 import About from "../components/About/About";
