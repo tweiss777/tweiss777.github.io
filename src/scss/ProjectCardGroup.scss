@@ -1,0 +1,13 @@
+@import "./grid.scss";
+
+.project-card-group {
+    flex-wrap: wrap;
+    @include row;
+    gap: 10px;
+}
+
+@media screen and (max-width: 847px) {
+    .project-card-group {
+        @include justify-center;
+    }
+}
