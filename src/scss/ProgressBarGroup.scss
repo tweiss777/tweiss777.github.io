@@ -1,0 +1,13 @@
+@import './grid.scss';
+.progressbar-container{
+    @include row;
+    gap: 10px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+@media screen and (max-width: 750px){
+    .progressbar-container{
+        @include column;       
+    }
+}
