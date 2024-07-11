@@ -3,11 +3,11 @@ type WorkExperience = {
   position: string;
   date: string;
   company_img: string;
-  cardMargin: string;
+  cardMargin?: string;
   description?: string[];
 };
 
-const workCards: WorkExperience[] = [
+const workExperience: WorkExperience[] = [
   {
     name: "Google",
     position: "Software Engineer",
@@ -33,4 +33,4 @@ const workCards: WorkExperience[] = [
     cardMargin: "right",
   },
 ];
-export default workCards;
+export default workExperience;
