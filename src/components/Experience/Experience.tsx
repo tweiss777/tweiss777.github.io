@@ -2,7 +2,12 @@ import WorkCard from "./Components/WorkCard";
 import WorkCardGroup from "./Components/WorkCardGroup";
 import ExperienceHeader from "./Components/ExperienceHeader";
 import workExperience from "../../data/workExperience";
+import { useState } from "react";
 export default function Experience() {
+    const [currentWork, setCurrentWork] = useState(null);
+    function handleOnClick(work: any) {
+
+    }
   return (
     <>
       <ExperienceHeader />
@@ -10,6 +15,7 @@ export default function Experience() {
         <WorkCardGroup>
           {workExperience.map((work, i) => (
             <WorkCard
+              handleOnClick={handleOnClick} 
               key={i}
               name={work.name}
               position={work.position}
