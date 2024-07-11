@@ -1,36 +1,44 @@
 import "../../../scss/WorkCard.scss";
 interface IProps {
-    name: string;
-    position: string;
-    date: string;
-    company_img: string;
-    cardMargin?: string;
+  name: string;
+  position: string;
+  date: string;
+  company_img: string;
+  cardMargin?: string;
+  description?: string[];
+  handleOnClick: (work: any) => void;
 }
 
 export default function WorkCard({
-    name,
-    position,
-    date,
-    company_img,
-    cardMargin = "right",
+  name,
+  position,
+  date,
+  company_img,
+  cardMargin = "right",
+  description,
+  handleOnClick,
 }: IProps) {
-    return (
-        <div className="work-card-container">
-            <div className="work-card-dot"></div>
-            <div className={`work-card-date date-${cardMargin}`}>
-                <h2>{date}</h2>
-            </div>
-            <div className={`work-card position-${cardMargin}`}>
-                <div className="work-card-content">
-                    <div className="work-card-img">
-                        <img src={company_img} alt={name} />
-                    </div>
-                    <div className="work-card-text">
-                        <h1>{name}</h1>
-                        <h2>{position}</h2>
-                    </div>
-                </div>
-            </div>
+  function onClickExperience() { const work = { name, position, date, company_img, description: description ?? [], };
+    console.log('click');
+    handleOnClick(work);
+  }
+  return (
+    <div onClick={onClickExperience} className="work-card-container">
+      <div className="work-card-dot"></div>
+      <div className={`work-card-date date-${cardMargin}`}>
+        <h2>{date}</h2>
+      </div>
+      <div className={`work-card position-${cardMargin}`}>
+        <div className="work-card-content">
+          <div className="work-card-img">
+            <img src={company_img} alt={name} />
+          </div>
+          <div className="work-card-text">
+            <h1>{name}</h1>
+            <h2>{position}</h2>
+          </div>
         </div>
-    );
+      </div>
+    </div>
+  );
 }
