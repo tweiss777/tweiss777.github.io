@@ -18,8 +18,7 @@ export default function WorkCard({
   description,
   handleOnClick,
 }: IProps) {
-  function onClickExperience() { const work = { name, position, date, company_img, description: description ?? [], };
-    console.log('click');
+  function onClickExperience() { const work = { name, position, date, company_img, description: description ?? null, };
     handleOnClick(work);
   }
   return (
