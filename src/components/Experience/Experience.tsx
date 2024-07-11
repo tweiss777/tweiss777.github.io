@@ -1,6 +1,7 @@
 import WorkCard from "./Components/WorkCard";
 import WorkCardGroup from "./Components/WorkCardGroup";
 import ExperienceHeader from "./Components/ExperienceHeader";
+import DetailedWorkExperience from "../DetailedWorkExperience/DetailedWorkExperience";
 import workExperience from "../../data/workExperience";
 import { useState } from "react";
 import Modal from "../Modal/Modal";
@@ -15,9 +16,9 @@ export default function Experience() {
       <ExperienceHeader />
       {currentWork && (
         <Modal
-          header={currentWork?.name}
           onClose={() => setCurrentWork(null)}
         >
+            <DetailedWorkExperience {...currentWork} />
         </Modal>
       )}
       <div>
