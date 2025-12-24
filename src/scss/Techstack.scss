@@ -1,0 +1,89 @@
+@use "./grid.scss";
+
+.tech-stack-container {
+    color: #ffffff;
+    text-align: center;
+    overflow: hidden;
+    margin-bottom: 15px;
+    p {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+        background: linear-gradient(135deg, #7eeef7 0%, #c084fc 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        font-weight: 600;
+    }
+
+    .carousel-container {
+        animation: carousel 60s infinite linear;
+        display: inline-block;
+        @include grid.row;
+        @include grid.justify-center;
+
+        &:hover {
+            animation-play-state: paused;
+        }
+
+        .tech-stack {
+            @include grid.row;
+            @include grid.justify-center;
+        }
+    }
+
+    &:before {
+        position: absolute;
+        top: 450px;
+        left: 0;
+        width: 145px;
+        height: 200px;
+        content: " ";
+        z-index: 1;
+    }
+
+    &:after {
+        position: absolute;
+        top: 450px;
+        right: 0;
+        width: 145px;
+        height: 200px;
+        content: " ";
+    }
+}
+
+@keyframes carousel {
+    100% {
+        transform: translateX(-100%);
+    }
+
+    0% {
+        transform: translateX(100%);
+    }
+}
+
+@media screen and (max-width: 650px)  {
+    .tech-stack-container {
+
+        &:before,
+        &:after {
+            top: 524px;
+        }
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .tech-stack-container {
+
+        &:before,
+        &:after {
+            background: none;
+        }
+    }
+}
+@media screen and (max-width: 650px) {
+    .tech-stack-container {
+      .carousel-container {
+        animation-duration: 50s;
+      }
+    }
+  }

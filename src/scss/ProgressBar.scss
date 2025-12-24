@@ -1,0 +1,21 @@
+.skill {
+  h2{
+    color: #ffffff;
+    padding-left: 2%;
+  }
+
+}
+
+.progress-bar-container {
+    margin: 0 2%;
+    position: relative;
+    border-radius: 15px;
+    height: 15px;
+    background-color: #1f2020;
+    .progress {
+        text-align: center;
+        height: 100%;
+        background: linear-gradient(to left, #ffffff, #aaaeae,#1f2020);
+        border-radius: 15px;
+    }
+}

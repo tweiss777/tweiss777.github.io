@@ -1,0 +1,29 @@
+.work-card-group {
+    padding: 0 15%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+
+    // code for the timeline
+    &::before {
+        content: "";
+        position: absolute;
+        width: 5px;
+        height: 100%;
+        background-color: #d0e1e8;
+        left: calc(50% - 2.5px);
+        top: 0;
+    }
+}
+
+@media screen and (max-width: 930px) {
+    .work-card-group {
+        padding: 0;
+        margin-left: 0;          /* Removed margin-left here to use margins on the card instead */
+        
+        &::before {
+            left: 20px;          /* Align the timeline line with the dots */
+        }
+    }
+}

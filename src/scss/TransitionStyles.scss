@@ -1,0 +1,29 @@
+// src/scss/TransitionStyles.scss
+.my-transition-enter {
+    opacity: 0;
+}
+
+.my-transition-enter-active {
+    opacity: 1;
+    transition: opacity 300ms;
+}
+
+.my-transition-exit {
+    opacity: 1;
+}
+
+.my-transition-exit-active {
+    opacity: 0;
+    transition: opacity 300ms;
+}
+
+.wrapper-container {
+    margin: 2% 0; 
+}
+
+@media screen and (max-width: 600px){
+
+  .wrapper-container {
+    margin: 60px 0;
+  }
+}

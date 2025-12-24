@@ -1,0 +1,13 @@
+@use "./grid.scss";
+
+.blog-card-group {
+    flex-wrap: wrap;
+    @include grid.row;
+    gap: 10px;
+}
+
+@media screen and (max-width: 673px) {
+    .blog-card-group {
+        @include grid.justify-center;
+    }
+}
