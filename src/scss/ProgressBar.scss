@@ -10,15 +10,15 @@
   
   h2 {
     color: #ffffff;
-    font-size: 14px;
+    font-size: 20px;
     font-weight: 600;
     margin: 0;
     letter-spacing: 0.5px;
   }
 
   .percentage {
-    color: #64b5f6;
-    font-size: 13px;
+    color: #ffffff;
+    font-size: 20px;
     font-weight: 600;
     min-width: 35px;
     text-align: right;
@@ -28,7 +28,7 @@
 .progress-bar-container {
     position: relative;
     border-radius: 20px;
-    height: 8px;
+    height: 15px;
     background: linear-gradient(90deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.1) 100%);
     border: 1px solid rgba(100, 181, 246, 0.2);
     overflow: hidden;

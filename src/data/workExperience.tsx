@@ -15,7 +15,7 @@ const workExperience: WorkExperience[] = [
     position: 'Fullstack Developer',
     date: '2024 - Present',
     company_img:
-      'https://media.licdn.com/dms/image/v2/D4E0BAQHwoT6o1NhxEQ/company-logo_200_200/company-logo_200_200/0/1725997583313/bigthinkcapitalcom_logo?e=1753920000&v=beta&t=6dreFVONY0l1h-H9T2nMViAR6rivNUkoDMXNR19RMrE',
+      'https://tals-assets.s3.us-east-1.amazonaws.com/portfolio-assets/Big-Think-Capital-Logo-2.png',
     cardMargin: 'left',
     description: (
       <>
@@ -92,7 +92,7 @@ const workExperience: WorkExperience[] = [
     position: 'Fullstack Developer',
     date: '2022 - 2024',
     company_img:
-      'https://media.licdn.com/dms/image/v2/C560BAQHJpmi9uTUQsQ/company-logo_200_200/company-logo_200_200/0/1630634312010/the5_ers___trading_group_logo?e=1753920000&v=beta&t=90QHcCa4mJnMAaKmT4uREycguKf_QSEqsEiiKQMtHfk',
+      'https://tals-assets.s3.us-east-1.amazonaws.com/portfolio-assets/5erslogo.svg',
     cardMargin: 'right',
     description: <ul>
       <li>Collaborated within a team of 4 full-stack developers, contributing to the development of a fintech platform for capital market dealers combining algorithmic systems.</li>
@@ -108,7 +108,7 @@ const workExperience: WorkExperience[] = [
     position: 'Backend Developer',
     date: '2020 - 2021',
     company_img:
-      'https://media.licdn.com/dms/image/v2/D4D0BAQEwAHr_zOggjQ/company-logo_200_200/company-logo_200_200/0/1716192439613/israeli_air_force_logo?e=1753920000&v=beta&t=F7wYrRahlax6Sf4sSw5yvGYVyOeXcRYSrNtyruHNEZk',
+      'https://tals-assets.s3.us-east-1.amazonaws.com/portfolio-assets/israeli_air_force_logo%3Fe%3D176iaf.jpeg',
     cardMargin: 'left',
   },
   {
@@ -116,7 +116,7 @@ const workExperience: WorkExperience[] = [
     position: 'Blacknight Financial Services',
     date: '2018 - 2018',
     company_img:
-      'https://media.licdn.com/dms/image/v2/C4D0BAQHFMfRNfPwKww/company-logo_100_100/company-logo_100_100/0/1631340241035?e=1753920000&v=beta&t=HxBDpthOVvotin1rBkPo7b4ivf6RvhHrQyt0UyxC6l4',
+      'https://tals-assets.s3.us-east-1.amazonaws.com/portfolio-assets/blackKnight.jpeg',
     cardMargin: 'right',
   },
 ];
