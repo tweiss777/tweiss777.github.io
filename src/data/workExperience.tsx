@@ -15,7 +15,7 @@ const workExperience: WorkExperience[] = [
     position: 'Fullstack Developer',
     date: '2024 - Present',
     company_img:
-      'https://tals-assets.s3.us-east-1.amazonaws.com/portfolio-assets/Big-Think-Capital-Logo-2.png',
+      'https://tals-assets.s3.us-east-1.amazonaws.com/portfolio-assets/BigThinkCapital.png',
     cardMargin: 'left',
     description: (
       <>

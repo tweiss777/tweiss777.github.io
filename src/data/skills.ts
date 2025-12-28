@@ -3,18 +3,21 @@ export type ISkill = {
     complete: number;
 }
 const skills = [
-    { name: "HTML", complete: 100 },
-    { name: "CSS", complete: 95 },
-    { name: "JavaScript", complete: 95 },
-    { name: "SASS", complete: 90 },
-    { name: "TypeScript", complete: 90 },
-    { name: "React", complete: 85 },
-    { name: "Node.JS", complete: 90 },
-    { name: "MySQL", complete: 87 },
-    { name: "MongoDB", complete: 88 },
-    { name: "Git", complete: 90 },
-    { name: "REST", complete: 90 },
-    { name: "Agile", complete:  85 },
-    { name: "Apex", complete: 85 },
-  ];
-  export default skills;
+    {name: "JavaScript", complete: 95},
+    {name: "TypeScript", complete: 90},
+    {name: "Node.js", complete: 90},
+    {name: "REST", complete: 90},
+    {name: "Git", complete: 90},
+    {name: "ChatGPT", complete: 100},
+    {name: "Gemini", complete: 95},
+    {name: "Claude", complete: 90},
+    {name: "React", complete: 85},
+    {name: "MongoDB", complete: 88},
+    {name: "MySQL", complete: 87},
+    {name: "SASS", complete: 90},
+    {name: "Agile", complete: 85},
+    {name: "MCP Architecture", complete: 90},
+    {name: "Python", complete: 80},
+    {name: "Apex", complete: 85}
+];
+export default skills;

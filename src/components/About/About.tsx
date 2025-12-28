@@ -12,7 +12,7 @@ export default function About() {
       <Info
         name="Tal Weiss"
         title="Full Stack Developer"
-        about="Full-stack engineer with 4+ years of experience helping startups and growing teams design and build scalable, high-performance web applications. I translate complex business requirements into clean, intuitive user experiences and reliable, cloud-native systems using React, Node.js, and AWS—enabling teams to ship faster and scale with confidence."
+        about="Full-stack engineer with 5 years of experience helping startups and growing teams design and build scalable, high-performance web applications. I translate complex business requirements into clean, intuitive user experiences and reliable, cloud-native systems using React, Node.js, and AWS—enabling teams to ship faster and scale with confidence."
       />
       <TechStack>
         {techStack.map(({img, name}, index) => (

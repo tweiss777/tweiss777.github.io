@@ -1,5 +1,6 @@
 @use "./grid.scss";
 
+$font-color: #ffffff;
 .work-experience-container {
     @include grid.column;
     padding: 0 2%;
@@ -7,6 +8,7 @@
         @include grid.row;
         @include grid.justify-between;
         .company-name {
+            color: $font-color;
             font-size: 2.5rem;
         }
 
@@ -20,6 +22,7 @@
     }
 
     .position-date-container {
+        color: $font-color;
         @include grid.row;
         @include grid.justify-between;
 
@@ -34,5 +37,6 @@
 
     .description-container {
         font-size: 1rem;
+        color: $font-color;
     }
 }
