@@ -63,13 +63,19 @@
         .work-card-text {
             flex: 1;
             min-width: 0;
-            overflow: hidden;
 
             h1, h2 {
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
                 margin: 0;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            h2 {
+                font-size: 1rem;
             }
         }
 
@@ -93,6 +99,16 @@
     .work-card-container {
             .work-card {
                 width: 80%;
+
+                .work-card-text {
+                    h1 {
+                        font-size: 1.25rem;
+                    }
+
+                    h2 {
+                        font-size: 0.9rem;
+                    }
+                }
             }
 
             .work-card-date {
@@ -121,6 +137,35 @@
         .work-card-dot {
             left: 11px;
             top: 30px;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .work-card-container {
+        .work-card {
+            width: 85%;
+
+            .work-card-content {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1rem;
+
+                img {
+                    height: 120px;
+                    width: 120px;
+                }
+            }
+
+            .work-card-text {
+                h1 {
+                    font-size: 1rem;
+                }
+
+                h2 {
+                    font-size: 0.75rem;
+                }
+            }
         }
     }
 }
