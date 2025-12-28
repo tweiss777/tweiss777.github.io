@@ -35,9 +35,15 @@ export default function ProjectCard({
                 <div className="project-card-body">
                     <div className="blog-card-text">{description}</div>
                 </div>
-                <div className='github-logo-container justify-end'>
-                    <img alt={'github logo'} className={'github-logo'} />
-                </div>
+                {link &&
+                    <div className='github-logo-container justify-end'>
+                        <img
+                            alt='github logo'
+                            className='github-logo'
+                            src='https://tals-assets.s3.us-east-1.amazonaws.com/portfolio-assets/github-logo.svg'
+                        />
+                    </div>
+                }
             </div>
         </div>
     );
