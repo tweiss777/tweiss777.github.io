@@ -23,7 +23,6 @@ const techStack: ITechStack[] = [
   },
   {
     name: 'Express.js',
-    img: 'https://tals-assets.s3.us-east-1.amazonaws.com/portfolio-assets/express-js.png'
   },
   {
     img: 'https://tals-assets.s3.us-east-1.amazonaws.com/portfolio-assets/MySQL-Logo.wine.svg',
