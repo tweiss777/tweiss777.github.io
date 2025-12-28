@@ -1,5 +1,7 @@
 import "../../../scss/ProjectCard.scss";
 import { useState } from "react";
+import { JSX } from "react";
+
 interface IProps {
     title: string;
     description: JSX.Element | JSX.Element[];
@@ -32,6 +34,9 @@ export default function ProjectCard({
                 </div>
                 <div className="project-card-body">
                     <div className="blog-card-text">{description}</div>
+                </div>
+                <div className='github-logo-container justify-end'>
+                    <img alt={'github logo'} className={'github-logo'} />
                 </div>
             </div>
         </div>
