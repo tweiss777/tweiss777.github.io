@@ -45,7 +45,7 @@ nav {
         }
     }
     .link-container{
-        padding: 1.5rem;
+        padding-right: 1.5rem;
         @include grid.row;
         gap: 1rem;
         align-items: center;
@@ -61,5 +61,8 @@ nav {
         ul{
             @include grid.column;
         }
+    }
+    .link-container{
+        padding: 1.5rem;
     }
 }
