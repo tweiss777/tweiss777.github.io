@@ -17,6 +17,7 @@ export default function Experience() {
       {currentWork && (
         <Modal
           onClose={() => setCurrentWork(null)}
+          className={'open'}
         >
             <DetailedWorkExperience {...currentWork} >
                 {currentWork.description}

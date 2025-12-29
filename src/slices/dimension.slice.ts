@@ -15,10 +15,10 @@ export const dimensionSlice = createSlice({
     name: "dimension",
     initialState,
     reducers: {
-        setWidth: (state) => {
+        setWidth: (state: Dimension) => {
             state.width = window.innerWidth
         },
-        setHeight: (state) => {
+        setHeight: (state: Dimension) => {
             state.height = window.innerHeight
         },
     },

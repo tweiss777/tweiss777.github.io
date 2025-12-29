@@ -1,4 +1,6 @@
 import "../../../scss/WorkCard.scss";
+import { JSX } from "react";
+
 interface IProps {
   name: string;
   position: string;

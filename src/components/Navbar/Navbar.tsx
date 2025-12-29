@@ -6,6 +6,8 @@ import { CSSTransition } from "react-transition-group";
 import  { useDimensions }  from "../../hooks/useDimensions";
 import LinkCard from "../About/components/LinkCard";
 import Links from "../About/components/Links";
+import { JSX } from "react";
+
 interface IProps {
   children: JSX.Element | JSX.Element[];
 }

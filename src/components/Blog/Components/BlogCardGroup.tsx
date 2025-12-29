@@ -1,4 +1,6 @@
 import '../../../scss/BlogCardGroups.scss';
+import { JSX } from "react";
+
 interface IProps {
   children: JSX.Element | JSX.Element[];
 }
