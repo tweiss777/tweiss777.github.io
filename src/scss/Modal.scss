@@ -44,3 +44,37 @@
         }
     }
 }
+/* Fade states (ADDED) */
+.modal-container {
+    opacity: 0;
+    transition: opacity 250ms ease;
+    pointer-events: none;
+}
+
+.modal-container.enter,
+.modal-container.enter-active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-container.exit {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Optional: modal subtle motion */
+.modal-container .modal {
+    opacity: 0;
+    transform: translate(-50%, -55%);
+    transition: opacity 250ms ease, transform 250ms ease;
+}
+
+.modal-container.enter-active .modal {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+}
+
+.modal-container.exit .modal {
+    opacity: 0;
+    transform: translate(-50%, -45%);
+}

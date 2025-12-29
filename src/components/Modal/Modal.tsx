@@ -1,5 +1,7 @@
-import { useEffect } from "react";
-import '../../scss/Modal.scss';
+import { useEffect, useState } from "react";
+import "../../scss/Modal.scss";
+import { JSX } from "react";
+
 interface IProps {
     children: JSX.Element | JSX.Element[];
     header?: string;
@@ -8,25 +10,39 @@ interface IProps {
 }
 
 export default function Modal({ onClose, header, children }: IProps) {
+    const [state, setState] = useState<"enter" | "enter-active" | "exit">("enter");
+
+    function closeModal() {
+        setState("exit");
+        setTimeout(onClose, 250);
+    }
+
     function closeOnEscape(e: KeyboardEvent) {
-        if (e.key === 'Escape') {
-            onClose();
+        if (e.key === "Escape") {
+            closeModal();
         }
     }
 
     useEffect(() => {
-        document.addEventListener('keydown', closeOnEscape);
-        return () => document.removeEventListener('keydown', closeOnEscape);
-         
+        document.addEventListener("keydown", closeOnEscape);
 
-    },[]);
+        requestAnimationFrame(() => {
+            setState("enter-active");
+        });
+
+        return () => document.removeEventListener("keydown", closeOnEscape);
+    }, []);
 
     return (
-        <div onClick={onClose} className="modal-container">
-            <div className="modal">
-                <button onClick={onClose} className="close-btn">
-                    <span>✖</span>
+        <div
+            onClick={closeModal}
+            className={`modal-container ${state}`}
+        >
+            <div className="modal" >
+                <button onClick={closeModal} className="close-btn">
+                    ✖
                 </button>
+
                 <div className="modal-content">
                     {header && (
                         <>
