@@ -1,4 +1,6 @@
 name: deploy-site.yml
+permissions:
+  contents: write
 on:
   push:
     branches:
@@ -6,7 +8,7 @@ on:
 
 jobs:
   build:
-    name: Build
+    name: Build Portfolio
     runs-on: ubuntu-latest
 
     steps:
@@ -32,7 +34,7 @@ jobs:
           path: ./dist
 
   deploy:
-    name: Deploy
+    name: Deploy Portfolio
     needs: build
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
