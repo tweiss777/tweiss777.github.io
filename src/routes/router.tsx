@@ -15,6 +15,12 @@ export const routes = [
         nodeRef: createRef(),
     },
     {
+        path: "/experience",
+        element: <Experience />,
+        name: "Experience",
+        nodeRef: createRef(),
+    },
+    {
         path: "/projects",
         element: <Projects />,
         name: "Projects",
@@ -24,12 +30,6 @@ export const routes = [
         path: "/blog",
         element: <Blog />,
         name: "Dev Blog",
-        nodeRef: createRef(),
-    },
-    {
-        path: "/experience",
-        element: <Experience />,
-        name: "Experience",
         nodeRef: createRef(),
     },
     {
