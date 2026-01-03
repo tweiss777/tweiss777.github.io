@@ -1,17 +1,18 @@
 import { CSSTransition, SwitchTransition } from "react-transition-group";
 import "../scss/TransitionStyles.scss";
+import { useLocation } from 'react-router-dom'
 interface IProps {
     nodeRef: React.RefObject<HTMLDivElement>;
-    routeName: string;
     outlet: React.ReactElement<any, string | React.JSXElementConstructor<any>> | null
 }
 
-export default function TransitionWrapper({ outlet, routeName, nodeRef }: IProps) {
+export default function TransitionWrapper({ outlet, nodeRef }: IProps) {
+    const location = useLocation();
     return (
         <>
             <SwitchTransition>
                 <CSSTransition
-                    key={routeName}
+                    key={location.key}
                     timeout={300}
                     classNames="my-transition"
                     nodeRef={nodeRef}
