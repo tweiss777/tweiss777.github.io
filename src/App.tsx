@@ -28,7 +28,6 @@ function App() {
         </Navbar>
       </DimensionProvider>
       <TransitionWrapper
-        routeName={location.pathname}
         nodeRef={nodeRef as React.RefObject<HTMLDivElement>}
         outlet={outlet}
       />

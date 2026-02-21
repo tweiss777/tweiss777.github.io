@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createHashRouter } from "react-router-dom";
 import { createRef } from "react";
 import Projects from "../components/Projects/Projects";
 import Experience from "../components/Experience/Experience";
@@ -39,7 +39,7 @@ export const routes = [
         nodeRef: createRef(),
     },
 ];
-export const router = createBrowserRouter([
+export const router = createHashRouter([
     {
         path: "/",
         element: <App />,
