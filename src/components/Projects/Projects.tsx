@@ -7,6 +7,13 @@ export default function Projects() {
             <ProjectsHeader />
             <div>
                 <ProjectCardGroup>
+                    <ProjectCard title={'Salesforce MCP Server'} description={
+                        <p>
+                            Developed a salesforce mcp server in python that connects to your Salesforce
+                            organization and performs CRUD operations for your lead, opportunity, contact, and account records. Custom fields are also supported
+                        </p>
+                    } link={'https://github.com/tweiss777/salesforce-mcp'}
+                    />
                     <ProjectCard
                         title="SmartJobs (Python Program W/ Dotnet Web App)"
                         description={
