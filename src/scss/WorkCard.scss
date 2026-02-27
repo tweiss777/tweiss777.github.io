@@ -55,8 +55,8 @@
             align-items: center;
             padding: 1.5rem;
             img {
-                height: 150px;
-                width: 150px;
+                height: 100px;
+                width: 100px;
             }
         }
 
@@ -150,11 +150,6 @@
                 flex-direction: column;
                 gap: 1rem;
                 padding: 1rem;
-
-                img {
-                    height: 120px;
-                    width: 120px;
-                }
             }
 
             .work-card-text {
