@@ -16,7 +16,6 @@
     }
 
     .carousel-container {
-        animation: carousel 60s infinite linear;
         display: inline-block;
         @include grid.row;
         @include grid.justify-center;
@@ -48,16 +47,6 @@
         width: 145px;
         height: 200px;
         content: " ";
-    }
-}
-
-@keyframes carousel {
-    100% {
-        transform: translateX(-100%);
-    }
-
-    0% {
-        transform: translateX(100%);
     }
 }
 
