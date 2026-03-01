@@ -14,6 +14,7 @@ const skills = [
     {name: "React", complete: 85},
     {name: "MongoDB", complete: 88},
     {name: "MySQL", complete: 87},
+    {name: "PostgreSQL", complete: 87},
     {name: "SASS", complete: 90},
     {name: "Agile", complete: 85},
     {name: "MCP Architecture", complete: 90},

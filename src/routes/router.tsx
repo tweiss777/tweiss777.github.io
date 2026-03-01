@@ -5,7 +5,7 @@ import Experience from "../components/Experience/Experience";
 import Blog from "../components/Blog/Blog";
 import About from "../components/About/About";
 import App from "../App";
-import Resume from "../components/Resume/Resume";
+// import Resume from "../components/Resume/Resume";
 
 export const routes = [
     {
@@ -32,12 +32,12 @@ export const routes = [
         name: "Dev Blog",
         nodeRef: createRef(),
     },
-    {
-        path: "resume",
-        element: <Resume />,
-        name: "Resume",
-        nodeRef: createRef(),
-    },
+    // {
+    //     path: "resume",
+    //     element: <Resume />,
+    //     name: "Resume",
+    //     nodeRef: createRef(),
+    // },
 ];
 export const router = createHashRouter([
     {

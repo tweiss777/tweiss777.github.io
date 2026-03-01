@@ -28,6 +28,10 @@ const techStack: ITechStack[] = [
     img: 'https://tals-assets.s3.us-east-1.amazonaws.com/portfolio-assets/MySQL-Logo.wine.svg',
   },
   {
+    name: 'PostgreSQL',
+    img: 'https://tals-assets.s3.us-east-1.amazonaws.com/portfolio-assets/postgresql.svg'
+  },
+  {
     name: 'Nest.js',
     img: 'https://tals-assets.s3.us-east-1.amazonaws.com/portfolio-assets/NestJS.svg',
   },
