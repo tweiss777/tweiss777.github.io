@@ -20,6 +20,38 @@
 .wrapper-container {
     margin: 2% 3%;
 }
+// fade transition
+.fade-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+.fade-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 600ms, transform 600ms;
+}
+.fade-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+.fade-exit-active {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 600ms, transform 600ms;
+}
+
+// scroll style
+.content {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 300ms ease, transform 300ms ease;
+}
+
+.slide-enter-done,
+.slide-appear-done {  /* Persist after transition */
+  opacity: 1;
+  transform: translateY(0);
+}
 
 @media screen and (max-width: 600px){
   .wrapper-container {
