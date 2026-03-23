@@ -4,7 +4,7 @@ interface Project {
     link: string;
 }
 
-const projects: Project[] = [
+export const projects: Project[] = [
     {
         title: 'Salesforce MCP Server',
         description: 'Developed a salesforce mcp server in python that connects to your Salesforce organization and performs CRUD operations for your lead, opportunity, contact, and account records. Custom fields are also supported',
