@@ -3,6 +3,7 @@ import { JSX } from "react";
 import useScrollTrigger from "../../../hooks/useScrollTrigger.ts";
 import {CSSTransition} from "react-transition-group";
 interface IProps {
+  index: number;
   name: string;
   position: string;
   date: string;
@@ -13,6 +14,7 @@ interface IProps {
 }
 
 export default function WorkCard({
+  index,
   name,
   position,
   date,
@@ -21,7 +23,14 @@ export default function WorkCard({
   description,
   handleOnClick,
 }: IProps) {
-  function onClickExperience() { const work = { name, position, date, company_img, description: description ?? null, };
+  function onClickExperience() {
+    const work = {
+      name,
+      position,
+      date,
+      company_img,
+      description: description ?? null,
+    };
     handleOnClick(work);
   }
   const { ref, isVisible} = useScrollTrigger()
@@ -44,6 +53,7 @@ export default function WorkCard({
                  <img src={company_img} alt={name} />
                </div>
                <div className="work-card-text">
+                 <div className="work-card-number">{String(index).padStart(2, "0")}</div>
                  <h1>{name}</h1>
                  <h2>{position}</h2>
                </div>

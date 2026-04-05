@@ -8,12 +8,9 @@ export default function Projects() {
             <ProjectsHeader />
             <div>
                 <ProjectCardGroup>
-                    {projects.map((project) =>{ return <ProjectCard title={project.title} description={
-                        <p>
-                            {project.description}
-                        </p>
-                    } link={project.link}
-                    />})}
+                    {projects.map((project, i) => <ProjectCard index={i + 1} title={project.title} description={project.description}
+                     link={project.link}
+                    />)}
                 </ProjectCardGroup>
             </div>
         </>

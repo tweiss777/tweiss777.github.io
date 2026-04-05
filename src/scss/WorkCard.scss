@@ -64,6 +64,17 @@
             flex: 1;
             min-width: 0;
 
+            .work-card-number {
+                font-size: 0.8rem;
+                font-weight: 700;
+                letter-spacing: 0.1em;
+                background: linear-gradient(90deg, #4facfe, #8e44ad);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                margin-bottom: 0.5rem;
+            }
+
             h1, h2 {
                 margin: 0;
                 word-wrap: break-word;

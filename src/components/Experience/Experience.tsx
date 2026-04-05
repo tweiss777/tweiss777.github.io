@@ -27,6 +27,7 @@ export default function Experience() {
         <WorkCardGroup>
           {workExperience.map((work, i) => (
             <WorkCard
+              index={i + 1}
               handleOnClick={handleOnClick}
               key={i}
               name={work.name}
