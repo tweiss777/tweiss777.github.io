@@ -1,13 +1,22 @@
 @use "./grid.scss";
 
 .blog-card-group {
-    flex-wrap: wrap;
     @include grid.row;
-    gap: 10px;
+    @include grid.justify-start;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 0 2%;
+}
+
+@media screen and (max-width: 1200px) {
+    .blog-card-group {
+        gap: 1rem;
+    }
 }
 
 @media screen and (max-width: 673px) {
     .blog-card-group {
         @include grid.justify-center;
+        margin: auto 10px;
     }
 }

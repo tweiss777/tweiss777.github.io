@@ -61,17 +61,17 @@ export default function About() {
             in={servicesVisible}
         >
             <div ref={servicesRef} className={'content'}>
-                <ServicesGroup >
-                    <h1 className={'container'}>
-                        {servicesOffered.title}
-                    </h1>
+                <ServicesGroup
+                    title={servicesOffered.title}
+                    closing={servicesOffered.closing}
+                >
                     <>
                         {servicesOffered.services.map((service, i) => (
                             <ServiceCard
+                                index={i + 1}
                                 title={service.title}
                                 description={service.description}
                                 bullets={service.bullets}
-                                align={ i % 2 === 0 ? 'left' : 'right'}
                             />
                         ))}
                     </>

@@ -1,50 +1,58 @@
 import "../../../scss/ProjectCard.scss";
 import { useState } from "react";
-import { JSX } from "react";
 
 interface IProps {
+    index: number;
     title: string;
-    description: JSX.Element | JSX.Element[];
+    description: string;
     link: string;
     linkText?: string;
+    bullets?: string[];
 }
 
 export default function ProjectCard({
+    index,
     title,
     description,
     link,
     linkText,
+    bullets,
 }: IProps) {
     const [hover, setHover] = useState<boolean>(false);
     return (
         <div
             onMouseEnter={() => setHover(true)}
             onMouseLeave={() => setHover(false)}
-            className="project-card-container"
+            className="project-card"
         >
-            {/* add the div for when mouse hovers over th card */}
             {hover && (
                 <a href={link}>
                     <div className="hover-message">{linkText ?? "Go to project."}</div>
                 </a>
             )}
-            <div className="project-card">
-                <div className="project-card-title">
-                    <h1>{title}</h1>
-                </div>
-                <div className="project-card-body">
-                    <div className="blog-card-text">{description}</div>
-                </div>
-                {link &&
-                    <div className='github-logo-container justify-end'>
+            <div className="project-info">
+                <div className="project-info-number">{String(index).padStart(2, "0")}</div>
+                <h3 className="project-info-title">{title}</h3>
+                <p className="project-info-description">{description}</p>
+                {bullets && bullets.length > 0 && (
+                    <ul className="project-info-bullets">
+                        {bullets.map((bullet, i) => (
+                            <li key={i}>{bullet}</li>
+                        ))}
+                    </ul>
+                )}
+            </div>
+            <>
+                {link && (
+                    <div className='github-logo-container'>
                         <img
                             alt='github logo'
                             className='github-logo'
                             src='https://tals-assets.s3.us-east-1.amazonaws.com/portfolio-assets/github-logo.svg'
                         />
                     </div>
-                }
-            </div>
+                )}
+            </>
         </div>
     );
 }

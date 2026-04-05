@@ -1,22 +1,24 @@
 @use "./grid.scss";
 
-.project-card-container {
+.project-card {
     position: relative;
     min-height: 300px;
-    width: 100%;
-    max-width: 400px;
-    border: 1px solid rgba(147, 112, 219, 0.4);
+    flex: 0 0 calc((96% - 3rem) / 3);
+    max-width: calc((96% - 3rem) / 3);
+    border: 1px solid rgba(147, 112, 219, 0.3);
     box-shadow: 0 8px 32px 0 rgba(79, 172, 254, 0.1), inset 0 0 20px rgba(255, 255, 255, 0.05);
-    border-radius: 15px;
-    background: linear-gradient(135deg, rgba(79, 172, 254, 0.15) 0%, rgba(142, 68, 173, 0.15) 100%);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.03);
     backdrop-filter: blur(4px);
     color: #ffffff;
     transition: all 0.3s ease;
-
+    @include grid.column;
+    @include grid.justify-between;
     &:hover {
-        background: linear-gradient(135deg, rgba(79, 172, 254, 0.25) 0%, rgba(142, 68, 173, 0.25) 100%);
+        background: linear-gradient(135deg, rgba(79, 172, 254, 0.1) 0%, rgba(142, 68, 173, 0.1) 100%);
         box-shadow: 0 12px 40px 0 rgba(79, 172, 254, 0.2), inset 0 0 20px rgba(255, 255, 255, 0.08);
-        transform: translateY(-5px);
+        transform: translateY(-4px);
+        border-color: rgba(79, 172, 254, 0.5);
     }
 
     a {
@@ -30,11 +32,12 @@
         color: #ffffff;
         @include grid.column;
         @include grid.justify-center;
-        align-items: center;
+        @include grid.align-center;
         position: absolute;
-        border-radius: 15px;
+        border-radius: 14px;
         width: 100%;
         height: 100%;
+        z-index: 1;
 
         &:hover {
             background-color: rgba($color: #000000, $alpha: 0.3);
@@ -42,39 +45,83 @@
         }
     }
 
-    .project-card {
-        padding: 0.5rem;
+    .project-info {
+        padding: 1.75rem 1.5rem;
         @include grid.column;
+        gap: 0.75rem;
         color: #ffffff;
 
-        .project-card-title {
-            color: #ffffff;
-            h1 {
-                color: #ffffff;
-            }
+        .project-info-number {
+            font-size: 1rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            background: linear-gradient(90deg, #4facfe, #8e44ad);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
-        .project-card-body {
+        .project-info-title {
+            font-size: 1.5rem;
+            font-weight: 700;
             color: #ffffff;
+            margin: 0;
+            line-height: 1.3;
+        }
+
+        .project-info-description {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .project-info-bullets {
+            @include grid.column;
+            list-style: none;
+            padding: 0;
+            margin: 0.25rem 0 0;
+            gap: 0.35rem;
+
             li {
-                margin-bottom: 3px;
-                color: #ffffff;
+                font-size: 1rem;
+                color: rgba(255, 255, 255, 0.6);
+                padding-left: 1.1rem;
+                position: relative;
+                line-height: 1.5;
+
+                &::before {
+                    content: '→';
+                    position: absolute;
+                    left: 0;
+                    color: #4facfe;
+                    font-size: 0.75rem;
+                    top: 1px;
+                }
             }
         }
-        .github-logo-container {
-            position: absolute;
-            right: 5px;
-            bottom: 5px;
-            .github-logo {
-                height: 30px;
-                width: 30px;
-            }
+    }
+    .github-logo-container {
+        padding: 1.75rem 1.5rem;
+        @include grid.row;
+        @include grid.justify-end;
+        .github-logo {
+            height: 30px;
+            width: 30px;
         }
     }
 }
 
+@media screen and (max-width: 1200px) {
+    .project-card {
+        flex: 0 0 calc((100% - 1.5rem) / 2);
+        max-width: calc((100% - 1.5rem) / 2);
+    }
+}
+
 @media screen and (max-width: 847px) {
-    .project-card-container {
-        max-width: none;
+    .project-card {
+        flex: 0 0 100%;
+        max-width: 100%;
     }
 }

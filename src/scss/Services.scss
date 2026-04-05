@@ -1,36 +1,139 @@
 @use "./grid.scss";
 
-.services-card-group {
-  @include grid.row;
+.services-section {
+  padding: 2rem 0 3rem;
 
-  gap: 15px;
-  flex-wrap: wrap;
-  margin: auto 2%;
-  text-align: center;
-  .container{
+  .services-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ffffff;
     text-align: center;
+    margin-bottom: 2.5rem;
+    position: relative;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(90deg, #4facfe, #8e44ad);
+      margin: 0.6rem auto 0;
+      border-radius: 2px;
+    }
+  }
+
+  .services-grid {
+    @include grid.row;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 0 2%;
+    @include grid.justify-start;
+  }
+
+  .services-closing {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 0.95rem;
+    font-style: italic;
+    margin-top: 2.5rem;
+    padding: 0 10%;
+  }
+}
+
+.service-card {
+  @include grid.column;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(147, 112, 219, 0.3);
+  border-radius: 14px;
+  padding: 1.75rem 1.5rem;
+  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+  gap: 0.75rem;
+  flex: 0 0 calc((88% - 3rem) / 3);
+  max-width: calc((88% - 3rem) / 3);
+
+  &:hover {
+    transform: translateY(-4px);
+    background: linear-gradient(135deg, rgba(79, 172, 254, 0.1) 0%, rgba(142, 68, 173, 0.1) 100%);
+    border-color: rgba(79, 172, 254, 0.5);
+    cursor: default;
+  }
+
+  .service-card-number {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    background: linear-gradient(90deg, #4facfe, #8e44ad);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .service-card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
     color: #ffffff;
-    flex-basis: 100%;
+    margin: 0;
+    line-height: 1.3;
   }
-  .card-left {
-    margin-left: auto;
+
+  .service-card-description {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.6;
+    margin: 0;
   }
-  .card-right{
-    margin-right: auto;
-  }
-  .service-card{
-    text-align: left;
-    flex-basis: 50%;
-    color: #ffffff;
-    ul {
-      @include grid.column;
+
+  .service-card-bullets {
+    @include grid.column;
+    list-style: none;
+    padding: 0;
+    margin: 0.25rem 0 0;
+    gap: 0.35rem;
+
+    li {
+      font-size: 1rem;
+      color: rgba(255, 255, 255, 0.6);
+      padding-left: 1.1rem;
+      position: relative;
+      line-height: 1.5;
+
+      &::before {
+        content: '→';
+        position: absolute;
+        left: 0;
+        color: #4facfe;
+        font-size: 0.75rem;
+        top: 1px;
+      }
     }
   }
 }
 
-@media screen and (max-width: 847px) {
-  .services-card-group {
-    margin: auto 10px;
-    @include grid.justify-center;
+@media screen and (max-width: 1200px) {
+  .service-card {
+    flex: 0 0 calc((100% - 1.5rem) / 2);
+    max-width: calc((100% - 1.5rem) / 2);
   }
 }
+
+@media screen and (max-width: 640px) {
+  .services-section {
+    .services-title {
+      font-size: 1.5rem;
+    }
+
+    .services-grid {
+      @include grid.justify-center;
+    }
+
+    .services-closing {
+      padding: 0 4%;
+    }
+  }
+
+  .service-card {
+    flex: 0 0 88%;
+    max-width: 100%;
+  }
+}
+

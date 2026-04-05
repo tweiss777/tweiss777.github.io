@@ -1,10 +1,19 @@
-import '../../../scss/Services.scss'
-import {JSX} from "react";
+import "../../../scss/Services.scss";
 
-type ServicesGroupProps = {
-    children: JSX.Element | JSX.Element[]
+interface IProps {
+    title: string;
+    closing: string;
+    children: React.ReactNode;
 }
 
-export default function ServicesGroup({children}: ServicesGroupProps){
-    return <div className="services-card-group">{children}</div>
+export default function ServicesGroup({ title, closing, children }: IProps) {
+    return (
+        <section className="services-section">
+            <h2 className="services-title">{title}</h2>
+            <div className="services-grid">
+                {children}
+            </div>
+            <p className="services-closing">{closing}</p>
+        </section>
+    );
 }
