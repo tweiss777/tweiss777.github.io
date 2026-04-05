@@ -23,6 +23,50 @@
     justify-content: space-evenly;
 }
 
+@mixin align-start {
+    align-items: flex-start;
+}
+
+@mixin align-end {
+    align-items: flex-end;
+}
+
+@mixin align-center {
+    align-items: center;
+}
+
+@mixin align-stretch {
+    align-items: stretch;
+}
+
+@mixin align-baseline {
+    align-items: baseline;
+}
+
+@mixin align-self-start {
+    align-self: flex-start;
+}
+
+@mixin align-self-end {
+    align-self: flex-end;
+}
+
+@mixin align-self-center {
+    align-self: center;
+}
+
+@mixin align-self-stretch {
+    align-self: stretch;
+}
+
+@mixin align-self-baseline {
+    align-self: baseline;
+}
+
+@mixin align-self-auto {
+    align-self: auto;
+}
+
 .row {
     display: flex;
     flex-direction: row;
@@ -44,3 +88,48 @@
 .justify-between{
     justify-content: space-between;
 }
+
+.align-start {
+    align-items: flex-start;
+}
+
+.align-end {
+    align-items: flex-end;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.align-stretch {
+    align-items: stretch;
+}
+
+.align-baseline {
+    align-items: baseline;
+}
+
+.align-self-start {
+    align-self: flex-start;
+}
+
+.align-self-end {
+    align-self: flex-end;
+}
+
+.align-self-center {
+    align-self: center;
+}
+
+.align-self-stretch {
+    align-self: stretch;
+}
+
+.align-self-baseline {
+    align-self: baseline;
+}
+
+.align-self-auto {
+    align-self: auto;
+}
+

@@ -6,14 +6,18 @@ import ProgressBarGroup from "../ProgressBarGroup/ProgressBarGroup";
 import ProgressBar from "../ProgressBar/ProgressBar";
 import techStack from "../../data/techStack";
 import skills from "../../data/skills";
+import { servicesOffered } from "../../data/servicesOffered.ts";
 import { CSSTransition } from "react-transition-group";
 import '../../scss/TransitionStyles.scss'
 import  useScrollTrigger from '../../hooks/useScrollTrigger'
-
+import ServicesGroup from "../Services/Components/ServicesGroup.tsx";
+import ServiceCard from "../Services/Components/ServiceCard.tsx";
+import '../../scss/grid.scss';
 export default function About() {
   const { ref: infoRef, isVisible: infoVisible } = useScrollTrigger();
   const { ref: techRef, isVisible: techVisible } = useScrollTrigger();
   const { ref: skillsRef, isVisible: skillsVisible } = useScrollTrigger();
+  const { ref: servicesRef, isVisible: servicesVisible} = useScrollTrigger();
 
   return (
     <>
@@ -50,12 +54,37 @@ export default function About() {
           </TechStack>
         </div>
       </CSSTransition>
+        <CSSTransition
+            timeout={400}
+            classNames='slide'
+            nodeRef={servicesRef}
+            in={servicesVisible}
+        >
+            <div ref={servicesRef} className={'content'}>
+                <ServicesGroup >
+                    <h1 className={'container'}>
+                        {servicesOffered.title}
+                    </h1>
+                    <>
+                        {servicesOffered.services.map((service, i) => (
+                            <ServiceCard
+                                title={service.title}
+                                description={service.description}
+                                bullets={service.bullets}
+                                align={ i % 2 === 0 ? 'left' : 'right'}
+                            />
+                        ))}
+                    </>
+                </ServicesGroup>
+            </div>
+        </CSSTransition>
       <CSSTransition
           timeout={400}
           classNames='slide'
           nodeRef={skillsRef}
           in={skillsVisible}
       >
+        {/*  consider removing this progress bar */}
         <div ref={skillsRef} className={'content'}>
           <ProgressBarGroup>
             {skills.map(({ name, complete }, index) => (
@@ -66,6 +95,7 @@ export default function About() {
           </ProgressBarGroup>
         </div>
       </CSSTransition>
+
     </>
   );
 }
