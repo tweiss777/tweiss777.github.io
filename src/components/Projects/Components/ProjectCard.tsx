@@ -1,5 +1,6 @@
 import "../../../scss/ProjectCard.scss";
 import { useState } from "react";
+import {GITHUB_ICON, WEBSITE_ICON} from "../../../data/iconLinks.ts";
 
 interface IProps {
     index: number;
@@ -19,6 +20,9 @@ export default function ProjectCard({
     bullets,
 }: IProps) {
     const [hover, setHover] = useState<boolean>(false);
+    const linkIcon = link.includes('github') ?
+        GITHUB_ICON :
+        WEBSITE_ICON ;
     return (
         <div
             onMouseEnter={() => setHover(true)}
@@ -44,11 +48,11 @@ export default function ProjectCard({
             </div>
             <>
                 {link && (
-                    <div className='github-logo-container'>
+                    <div className='link-container'>
                         <img
-                            alt='github logo'
-                            className='github-logo'
-                            src='https://tals-assets.s3.us-east-1.amazonaws.com/portfolio-assets/github-logo.svg'
+                            alt='link-icon'
+                            className='link'
+                            src={linkIcon}
                         />
                     </div>
                 )}
