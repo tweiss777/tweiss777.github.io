@@ -1,0 +1,2 @@
+export const GITHUB_ICON = 'https://tals-assets.s3.us-east-1.amazonaws.com/portfolio-assets/github-logo.svg';
+export const WEBSITE_ICON = 'https://tals-assets.s3.us-east-1.amazonaws.com/portfolio-assets/globe_icon.svg';
