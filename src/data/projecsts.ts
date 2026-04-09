@@ -6,6 +6,11 @@ interface Project {
 
 export const projects: Project[] = [
     {
+        title: "AutoTireRescue.com",
+        description: "Website for roadside assistance, tire repair, and lockout services",
+        link: "https://autotirerescue.com/"
+    },
+    {
         title: 'Salesforce MCP Server',
         description: 'Developed a salesforce mcp server in python that connects to your Salesforce organization and performs CRUD operations for your lead, opportunity, contact, and account records. Custom fields are also supported',
         link: 'https://github.com/tweiss777/salesforce-mcp'
@@ -29,5 +34,6 @@ export const projects: Project[] = [
         title: 'Web calculator',
         description: 'A calculator web app mimicking a real calculator based on HTML, CSS, and JavaScript and the iOS theme.',
         link: 'https://github.com/tweiss777/basic-calculator'
-    }
+    },
+
 ];

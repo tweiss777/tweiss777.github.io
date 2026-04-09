@@ -101,11 +101,11 @@
             }
         }
     }
-    .github-logo-container {
+    .link-container {
         padding: 1.75rem 1.5rem;
         @include grid.row;
         @include grid.justify-end;
-        .github-logo {
+        .link {
             height: 30px;
             width: 30px;
         }
