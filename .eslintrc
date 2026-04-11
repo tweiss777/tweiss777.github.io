@@ -1,0 +1,42 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:react/recommended"
+  ],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "react",
+    "react-hooks"
+  ],
+  "rules": {
+    // Basic React/JSX rules
+    "react/react-in-jsx-scope": "off", // Recommended when using React 17+ (which your setup implies)
+    "react/jsx-uses-react": "off", // Recommended when using React 17+
+    "react/jsx-uses-fragment": "off", // Recommended when using React 17+
+
+    // TypeScript-specific overrides
+    "@typescript-eslint/explicit-module-boundary-types": "warn",
+    "@typescript-eslint/no-explicit-any": "warn",
+
+    // General formatting/best practice adjustments
+    "indent": ["error", 2],
+    "quotes": ["error", "single"]
+  },
+  "overrides": [
+    {
+      "files": ["*.tsx", "*.ts"],
+      "rules": {
+        // TS specific rules to ensure type safety checks are robust
+        "@typescript-eslint/no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
+      }
+    }
+  ]
+}
