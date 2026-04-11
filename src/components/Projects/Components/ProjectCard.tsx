@@ -1,4 +1,5 @@
 import "../../../scss/ProjectCard.scss";
+import "../../../scss/grid.scss"
 import { useState } from "react";
 import {GITHUB_ICON, WEBSITE_ICON} from "../../../data/iconLinks.ts";
 
@@ -6,7 +7,8 @@ interface IProps {
     index: number;
     title: string;
     description: string;
-    link: string;
+    repo?: string;
+    link?: string
     linkText?: string;
     bullets?: string[];
 }
@@ -15,14 +17,12 @@ export default function ProjectCard({
     index,
     title,
     description,
+    repo,
     link,
     linkText,
     bullets,
 }: IProps) {
     const [hover, setHover] = useState<boolean>(false);
-    const linkIcon = link.includes('github') ?
-        GITHUB_ICON :
-        WEBSITE_ICON ;
     return (
         <div
             onMouseEnter={() => setHover(true)}
@@ -30,9 +30,14 @@ export default function ProjectCard({
             className="project-card"
         >
             {hover && (
-                <a href={link}>
-                    <div className="hover-message">{linkText ?? "Go to project."}</div>
-                </a>
+                <div className={"hover-message"}>
+                    {repo && <a href={repo}>
+                        {linkText ?? "Go to Project"}
+                    </a>}
+                    {link && <a href={link}>
+                        {linkText ?? "Go to Website"}
+                    </a>}
+                </div>
             )}
             <div className="project-info">
                 <div className="project-info-number">{String(index).padStart(2, "0")}</div>
@@ -46,17 +51,26 @@ export default function ProjectCard({
                     </ul>
                 )}
             </div>
-            <>
+            <div className="row justify-end">
+                {repo && (
+                    <div className='link-container'>
+                        <img
+                            alt='repo-icon'
+                            className='link'
+                            src={GITHUB_ICON}
+                        />
+                    </div>
+                )}
                 {link && (
                     <div className='link-container'>
                         <img
                             alt='link-icon'
                             className='link'
-                            src={linkIcon}
+                            src={WEBSITE_ICON}
                         />
                     </div>
-                )}
-            </>
+                    )}
+            </div>
         </div>
     );
 }
