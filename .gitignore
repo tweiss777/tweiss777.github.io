@@ -26,3 +26,5 @@ dist-ssr
 .pnp.loader.mjs
 .yarn
 .vscode%
+.claude
+skills-lock.json
