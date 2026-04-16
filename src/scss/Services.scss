@@ -26,8 +26,8 @@
     @include grid.row;
     flex-wrap: wrap;
     gap: 1.5rem;
-    padding: 0 2%;
-    @include grid.justify-start;
+    padding: 0 1.5rem;
+    @include grid.justify-center;
   }
 
   .services-closing {
@@ -109,14 +109,13 @@
   }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1400px) {
   .service-card {
-    flex: 0 0 calc((100% - 1.5rem) / 2);
-    max-width: calc((100% - 1.5rem) / 2);
+    flex: 0 0 calc((67% - 9rem) / 2);
   }
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 845px) {
   .services-section {
     .services-title {
       font-size: 1.5rem;
@@ -130,7 +129,6 @@
       padding: 0 4%;
     }
   }
-
   .service-card {
     flex: 0 0 88%;
     max-width: 100%;
