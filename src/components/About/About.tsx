@@ -9,15 +9,19 @@ import skills from "../../data/skills";
 import { servicesOffered } from "../../data/servicesOffered.ts";
 import { CSSTransition } from "react-transition-group";
 import '../../scss/TransitionStyles.scss'
-import  useScrollTrigger from '../../hooks/useScrollTrigger'
+import useScrollTrigger from '../../hooks/useScrollTrigger'
 import ServicesGroup from "../Services/Components/ServicesGroup.tsx";
 import ServiceCard from "../Services/Components/ServiceCard.tsx";
 import '../../scss/grid.scss';
+import { useNavigate } from "react-router-dom";
+import Button from "../Button.tsx";
+
 export default function About() {
   const { ref: infoRef, isVisible: infoVisible } = useScrollTrigger();
   const { ref: techRef, isVisible: techVisible } = useScrollTrigger();
   const { ref: skillsRef, isVisible: skillsVisible } = useScrollTrigger();
   const { ref: servicesRef, isVisible: servicesVisible} = useScrollTrigger();
+  const navigate = useNavigate();
 
   return (
     <>
@@ -28,12 +32,18 @@ export default function About() {
           in={infoVisible}
       >
         <div className={'content'} ref={infoRef}>
-        <Info
-            name="Tal Weiss"
-            title="Full Stack Developer"
-            about="I'm a full-stack engineer with 5 years of experience helping startups and growing teams design and build scalable, high-performance web applications. I translate complex business requirements into clean, intuitive user experiences and reliable, cloud-native systems using React, Node.js, and AWS—enabling teams to ship faster and scale with confidence."
-        />
-
+          <Info
+              name="Tal Weiss"
+              title="Full Stack Developer"
+              about="I'm a full-stack engineer with 5 years of experience helping startups and growing teams design and build scalable, high-performance web applications. I translate complex business requirements into clean, intuitive user experiences and reliable, cloud-native systems using React, Node.js, and AWS—enabling teams to ship faster and scale with confidence."
+          />
+            <div className="row justify-center">
+                <Button
+                    onOk={() => navigate('/contact')}
+                >
+                    Get in touch!
+                </Button>
+            </div>
         </div>
       </CSSTransition>
       <CSSTransition
@@ -54,30 +64,30 @@ export default function About() {
           </TechStack>
         </div>
       </CSSTransition>
-        <CSSTransition
-            timeout={400}
-            classNames='slide'
-            nodeRef={servicesRef}
-            in={servicesVisible}
-        >
-            <div ref={servicesRef} className={'content'}>
-                <ServicesGroup
-                    title={servicesOffered.title}
-                    closing={servicesOffered.closing}
-                >
-                    <>
-                        {servicesOffered.services.map((service, i) => (
-                            <ServiceCard
-                                index={i + 1}
-                                title={service.title}
-                                description={service.description}
-                                bullets={service.bullets}
-                            />
-                        ))}
-                    </>
-                </ServicesGroup>
-            </div>
-        </CSSTransition>
+      <CSSTransition
+          timeout={400}
+          classNames='slide'
+          nodeRef={servicesRef}
+          in={servicesVisible}
+      >
+          <div ref={servicesRef} className={'content'}>
+              <ServicesGroup
+                  title={servicesOffered.title}
+                  closing={servicesOffered.closing}
+              >
+                  <>
+                      {servicesOffered.services.map((service, i) => (
+                          <ServiceCard
+                              index={i + 1}
+                              title={service.title}
+                              description={service.description}
+                              bullets={service.bullets}
+                          />
+                      ))}
+                  </>
+              </ServicesGroup>
+          </div>
+      </CSSTransition>
       <CSSTransition
           timeout={400}
           classNames='slide'
@@ -91,11 +101,9 @@ export default function About() {
                 <div className="progress-bar-col">
                   <ProgressBar key={index} complete={complete} name={name} />
                 </div>))}
-
           </ProgressBarGroup>
         </div>
       </CSSTransition>
-
     </>
   );
 }

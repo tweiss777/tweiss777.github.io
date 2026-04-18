@@ -1,0 +1,30 @@
+.btn-get-in-touch {
+  position: relative;
+  border: 1px solid rgba(147, 112, 219, 0.3);
+  flex: 0 0 35%;
+  box-shadow: 0 8px 32px 0 rgba(79, 172, 254, 0.1), inset 0 0 20px rgba(255, 255, 255, 0.05);
+  max-width: calc((100% - 1rem) / 2);
+  height: 100px;
+  font-family: inherit;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(4px);
+  color: #ffffff;
+  transition: all 0.3s ease;
+  font-size: 2rem;
+
+  &:hover {
+    background: linear-gradient(135deg, rgba(79, 172, 254, 0.1) 0%, rgba(142, 68, 173, 0.1) 100%);
+    box-shadow: 0 12px 40px 0 rgba(79, 172, 254, 0.2), inset 0 0 20px rgba(255, 255, 255, 0.08);
+    transform: translateY(-4px);
+    border-color: rgba(79, 172, 254, 0.5);
+  }
+
+}
+
+  @media screen and (max-width: 900px) {
+    .btn-get-in-touch{
+      flex: 0 0 100%;
+      max-width:calc((87% + 12rem) / 2)
+    }
+  }

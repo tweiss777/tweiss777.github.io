@@ -2,7 +2,7 @@
 
 .blog-card-group {
     @include grid.row;
-    @include grid.justify-start;
+    @include grid.justify-center;
     flex-wrap: wrap;
     gap: 1.5rem;
     padding: 0 2%;
@@ -10,6 +10,7 @@
 
 @media screen and (max-width: 1200px) {
     .blog-card-group {
+        grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
     }
 }
