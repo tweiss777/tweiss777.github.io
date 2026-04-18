@@ -50,7 +50,7 @@
   gap: 0.75rem;
   flex: 0 0 calc((88% - 3rem) / 3);
   max-width: calc((88% - 3rem) / 3);
-
+  min-height: 350px;
   &:hover {
     transform: translateY(-4px);
     background: linear-gradient(135deg, rgba(79, 172, 254, 0.1) 0%, rgba(142, 68, 173, 0.1) 100%);
