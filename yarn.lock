@@ -1399,13 +1399,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cookie-es@npm:^3.1.1":
-  version: 3.1.1
-  resolution: "cookie-es@npm:3.1.1"
-  checksum: 10c0/62cf0c325cc547b52477b351e9b5d068b3ffc74f7d143cdf7af854648dd1015fca3aed1498b355365e24b0746333f0b15688ed3a535abecc5ed0a046ae956a84
-  languageName: node
-  linkType: hard
-
 "cookie@npm:^1.0.1":
   version: 1.1.1
   resolution: "cookie@npm:1.1.1"
@@ -2574,7 +2567,6 @@ __metadata:
     eslint-plugin-react-refresh: "npm:^0.4.6"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
-    react-router: "npm:^8.0.1"
     react-router-dom: "npm:^7.18.0"
     react-transition-group: "npm:^4.4.5"
     sass: "npm:^1.77.7"
@@ -2685,21 +2677,6 @@ __metadata:
     react-dom:
       optional: true
   checksum: 10c0/7ab6c6dc7efdc14092486d63f55b04f9e3ef269fdec8c695a513f69e55d02a9beab8f637a13396952815d85accf16e7db2d65d9cbb68def13c349be82ceb5aee
-  languageName: node
-  linkType: hard
-
-"react-router@npm:^8.0.1":
-  version: 8.0.1
-  resolution: "react-router@npm:8.0.1"
-  dependencies:
-    cookie-es: "npm:^3.1.1"
-  peerDependencies:
-    react: ">=19.2.7"
-    react-dom: ">=19.2.7"
-  peerDependenciesMeta:
-    react-dom:
-      optional: true
-  checksum: 10c0/7ffcac5caf209b6988a0e045fd044f5f8e91e7f677475f707becd514f316f6c2d556f90e371c5a41f6033da891a2d97370b1c5d443ba96991ab0f4f71252c8ba
   languageName: node
   linkType: hard
 
