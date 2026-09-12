@@ -4,7 +4,6 @@ import Projects from "../components/Projects/Projects";
 import Experience from "../components/Experience/Experience";
 import Blog from "../components/Blog/Blog";
 import About from "../components/About/About";
-import Contact from "../components/Contact/Contact";
 import App from "../App";
 // import Resume from "../components/Resume/Resume";
 
@@ -13,12 +12,6 @@ export const routes = [
         path: "/",
         element: <About />,
         name: "About",
-        nodeRef: createRef(),
-    },
-    {
-        path: "/contact",
-        element: <Contact />,
-        name: "Get in touch!",
         nodeRef: createRef(),
     },
     {

@@ -13,6 +13,11 @@ export const projects: Project[] = [
         repo: "https://github.com/tweiss777/TireRescue.com/"
     },
     {
+        title: 'Sleeper MCP Server',
+        description: 'An MCP server that consumes the Sleeper fantasy sports API, exposing league, roster, and matchup data to LLM clients.',
+        repo: 'https://github.com/tweiss777/sleeper-mcp'
+    },
+    {
         title: 'Salesforce MCP Server',
         description: 'Developed a Salesforce mcp server in python that connects to your Salesforce organization and performs CRUD operations for your lead, opportunity, contact, and account records. Custom fields are also supported',
         repo: 'https://github.com/tweiss777/salesforce-mcp'

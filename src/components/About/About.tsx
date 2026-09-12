@@ -13,15 +13,12 @@ import useScrollTrigger from '../../hooks/useScrollTrigger'
 import ServicesGroup from "../Services/Components/ServicesGroup.tsx";
 import ServiceCard from "../Services/Components/ServiceCard.tsx";
 import '../../scss/grid.scss';
-import { useNavigate } from "react-router-dom";
-import Button from "../Button.tsx";
 
 export default function About() {
   const { ref: infoRef, isVisible: infoVisible } = useScrollTrigger();
   const { ref: techRef, isVisible: techVisible } = useScrollTrigger();
   const { ref: skillsRef, isVisible: skillsVisible } = useScrollTrigger();
   const { ref: servicesRef, isVisible: servicesVisible} = useScrollTrigger();
-  const navigate = useNavigate();
 
   return (
     <>
@@ -37,13 +34,6 @@ export default function About() {
               title="Full Stack Developer"
               about="I'm a full-stack engineer with 5 years of experience helping startups and growing teams design and build scalable, high-performance web applications. I translate complex business requirements into clean, intuitive user experiences and reliable, cloud-native systems using React, Node.js, and AWS—enabling teams to ship faster and scale with confidence."
           />
-            <div className="row justify-center">
-                <Button
-                    onOk={() => navigate('/contact')}
-                >
-                    Get in touch!
-                </Button>
-            </div>
         </div>
       </CSSTransition>
       <CSSTransition
